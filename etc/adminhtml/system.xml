@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Config/etc/system_file.xsd">
+    <system>
+        <section id="sales">
+
+            <!-- Sales Automation -->
+            <group id="automation" translate="label" type="text" sortOrder="200" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Sales Automation</label>
+
+                <field id="order_rules" translate="label" sortOrder="150" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Order Rules</label>
+                    <frontend_model>Gabrielqs\SalesAutomation\Block\System\Config\Form\Field\OrderRules</frontend_model>
+                    <backend_model>Gabrielqs\SalesAutomation\Model\System\Config\OrderRules</backend_model>
+                    <comment>Há um bug no magento que não me deixou criar o selectbox para ações. Os valores
+                    possíveis atualmente são invoice e cancel.</comment>
+                </field>
+
+            </group>
+        </section>
+    </system>
+</config>
